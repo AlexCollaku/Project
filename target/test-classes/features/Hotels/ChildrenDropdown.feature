@@ -1,6 +1,6 @@
 @test
 Feature: Children Dropdown
-
+  @dropdown
   Scenario Outline: Verify user get correct number of dropdown after selecting children
     Given I am on hotels landing page
     When I select <childrenCount> in children dropdown

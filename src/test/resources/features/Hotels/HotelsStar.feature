@@ -16,7 +16,7 @@ Feature: Hotels Star
 #      | 2    |
 #      | 1    |
 
-  @test
+  @test @star
   Scenario Outline: Verify hotel shows up as star rating selected by user
     Given I am on default locations search result screen
     When I click on <star> star
