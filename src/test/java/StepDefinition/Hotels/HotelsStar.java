@@ -43,7 +43,7 @@ public class HotelsStar {
     public void clickStar(String star) {
         searchResultPage.scrollToCheckBoxStarRating();
 
-        userChoise = star;
+        //userChoise = star;
 
         searchResultPage.clickTheStar(star);
 
@@ -51,14 +51,14 @@ public class HotelsStar {
 
     @When("^I verify hotels are (.*) star rating$")
     public void verifyStarRating(String star) {
-        userChoise = star;
+        //userChoise = star;
         searchResultPage.scrollToInfo();
 
         for (String hStar : searchResultPage.getHotelsStar()) {
 
             String s = hStar.substring(0,1);
 
-            Assert.assertEquals(userChoise, s, "The star of the hotel is not the same");
+            Assert.assertEquals(s, star, "The star of the hotel is not the same");
         }
     }
     @When("^I am on default locations search result screen$")

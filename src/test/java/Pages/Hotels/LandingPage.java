@@ -1,6 +1,5 @@
 package Pages.Hotels;
 
-import Drivers.Web;
 import Pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -20,21 +19,9 @@ public class LandingPage extends BasePage {
         scrollByPixel(200);
         type(searchBoxLocator, destination);
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
     }
 
     public void clickSearchButton() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         clickThis(searchButtonLocator);
     }

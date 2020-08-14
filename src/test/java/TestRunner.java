@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         snippets = SnippetType.CAMELCASE,
 
         // Specify tags to be executed
-        tags = {"@star"},
+        tags = {"@project"},
 
         // readable console logs
         monochrome = true

@@ -63,4 +63,11 @@ public class DateHelper {
 
 
     }
+
+    public static String getHourValueXHourFromNow(int count) {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.HOUR, count);
+        SimpleDateFormat df = new SimpleDateFormat("ha");
+        return df.format(cal.getTime());
+    }
 }

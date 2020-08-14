@@ -29,10 +29,15 @@ public class BasePage {
         js.executeScript("arguments[0].values='%s';", element, data);
     }
 
+    public void refresh() {
+
+        Web.getDriver().navigate().refresh();
+    }
+
     // generic method to click on web element
     public void clickThis(By locator) {
 
-        findElementUsingFluentWait(locator).click();
+        Web.getDriver().findElement(locator).click();
     }
     public void clickThis(WebElement element) {
 
@@ -110,7 +115,13 @@ public class BasePage {
         return findElementUsingFluentWait(locator).isEnabled();
     }
 
-    // generic method to perform mouse hover on any web element
+    public boolean isWebElementDisplayed(By locator) {
+
+        return findElementUsingFluentWait(locator).isDisplayed();
+    }
+
+
+        // generic method to perform mouse hover on any web element
     public void mouseHoverOnElement(WebElement element) {
         Actions act = new Actions(Web.getDriver());
         act.moveToElement(element).build().perform();
