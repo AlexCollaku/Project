@@ -59,6 +59,7 @@ public class LandingPage extends BasePage {
     By myListsLocator = By.xpath("//a[@class='toggle-item']");
     By recommendForStudentLocator = By.xpath("//li[@class='recommend']");
     By nameOfSelectedBookLocator = By.xpath("//div[@class='name ']//a[@class='quickview']");
+    By itemRecommendLocator = By.xpath("//li[@class='wishlist']/preceding::span[contains(text(), 'items')]");
 
 
 
@@ -509,6 +510,11 @@ public class LandingPage extends BasePage {
         }
 
         return getTextFromElement(nameOfSelectedBookLocator);
+    }
+
+    public String getNumberOfItemsSelected() {
+
+        return getTextFromElement(itemRecommendLocator);
     }
 
 }

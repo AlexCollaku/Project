@@ -37,7 +37,7 @@ public class BasePage {
     // generic method to click on web element
     public void clickThis(By locator) {
 
-        Web.getDriver().findElement(locator).click();
+        findElementUsingFluentWait(locator).click();
     }
     public void clickThis(WebElement element) {
 

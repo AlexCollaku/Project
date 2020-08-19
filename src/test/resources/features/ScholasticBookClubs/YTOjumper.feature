@@ -12,8 +12,8 @@ Feature: YTO jumper
     Then I verify jumper is NOT displayed
 
     Examples:
-      |userEmail      |password   |
-      |al@project.com |alexbisha10|
+      |userEmail        |password |
+      |project@gmail.com|project20|
 
 
 
@@ -28,8 +28,8 @@ Feature: YTO jumper
       Then I verify jumper with text is displayed
 
       Examples:
-        |userEmail      |password   |
-        |al@project.com |alexbisha10|
+        |userEmail         |password |
+        |project@gmail.com |project20|
 
 
       Scenario Outline: Verify user is successfully able to update name in My Accounts
@@ -41,8 +41,8 @@ Feature: YTO jumper
         And I verify name is updated successfully in Page Header
 
         Examples:
-          |userEmail      |password   |
-          |al@project.com |alexbisha10|
+          |userEmail         |password |
+          |project@gmail.com |project20|
 
 
       Scenario Outline: Verify user is successfully able to add credit card in My Accounts
@@ -54,8 +54,8 @@ Feature: YTO jumper
         And I verify added card is displayed when shopping using credit card
 
         Examples:
-          |userEmail      |password   |
-          |al@project.com |alexbisha10|
+          |userEmail         |password |
+          |project@gmail.com |project20|
 
       Scenario Outline: Verify user can successfully add items to My Recommended list
         Given I am on the Homepage
@@ -65,6 +65,6 @@ Feature: YTO jumper
         Then I verify item is added to recommended list
 
         Examples:
-          |userEmail      |password   |
-          |al@project.com |alexbisha10|
+          |userEmail         |password |
+          |project@gmail.com |project20|
 

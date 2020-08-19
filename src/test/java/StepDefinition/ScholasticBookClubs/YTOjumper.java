@@ -153,10 +153,15 @@ public class YTOjumper {
     @When("^I verify item is added to recommended list$")
     public void verifyItemIsAdded() {
 
-        landingPage.getTextFromRecommendationsToStudent();
+//        landingPage.getTextFromRecommendationsToStudent();
+//        landingPage.clickToMyLists();
+//        landingPage.getTextFromRecommendForStudent();
+
+        Assert.assertEquals(landingPage.getNumberOfItemsSelected(), "0 items", "The number is not the same");
 
         landingPage.clickToMyLists();
-        landingPage.getTextFromRecommendForStudent();
+
+        Assert.assertEquals(landingPage.getNumberOfItemsSelected(), "1 items", "The number is not the same");
 
 
     }
